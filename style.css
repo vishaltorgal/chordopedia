@@ -1,0 +1,348 @@
+<<<<<<< HEAD
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8; /* Very light gray background */
+    color: #333; /* Darker text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex; /* For sticky footer */
+    flex-direction: column; /* For sticky footer */
+    min-height: 100vh; /* For sticky footer */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #ffffff; /* White header */
+    color: #4a4a4a; /* Dark gray text */
+    padding: 25px 0;
+    text-align: center;
+    font-size: 2.5em; /* Larger font for main title */
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* --- Navigation Bar Styling --- */
+nav {
+    background-color: #e0e7fd; /* Light blue navigation */
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    color: #2c3e50; /* Darker blue links */
+    text-decoration: none; /* Removes underline */
+    margin: 0 20px;
+    font-size: 1.15em;
+    padding: 8px 15px;
+    border-radius: 25px; /* Pill-shaped buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #c9d2ef; /* Slightly darker light blue on hover */
+    color: #1a2c3e;
+}
+
+/* --- Main Content Container --- */
+.container {
+    flex-grow: 1; /* Allows container to take up available space, pushing footer down */
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto; /* Centered with vertical space */
+    background-color: #ffffff; /* White container background */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* More prominent but soft shadow */
+    overflow: hidden; /* Clears floats if any inner elements use them */
+}
+
+/* --- Heading Styles (e.g., for song titles on individual song pages) --- */
+h2 {
+    color: #4a69bd; /* Muted blue for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #e0e7fd; /* Subtle separator */
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+/* --- Chord Info Section (Capo, Strumming) --- */
+.chord-info {
+    background-color: #fdfdff; /* Even lighter background for this section */
+    border: 1px solid #e0e7fd;
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin: 0 auto 30px auto; /* Centered, with space below */
+    width: fit-content; /* Make div only as wide as its content */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chord-info h3 {
+    color: #6a8cbf; /* A slightly darker muted blue */
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.chord-info p {
+    color: #777; /* Softer text color */
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic; /* Emphasize strumming pattern */
+}
+
+/* --- Preformatted Text Block (Lyrics with Chords) --- */
+pre {
+    background-color: #f0f4ff; /* Very light blue for code block */
+    color: #555; /* Slightly softer text color for code */
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Fira Code', 'Lucida Console', monospace; /* Modern monospace font */
+    line-height: 2; /* Increased for better readability */
+    white-space: pre-wrap; /* Ensures text wraps within the block */
+    word-wrap: break-word; /* Ensures long words break */
+    font-size: 1.05em;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Very subtle inner shadow */
+}
+
+/* --- Chord Highlight within Pre block --- */
+.chord {
+    font-weight: bold;
+    color: #e67e22; /* A warm, inviting orange for chords */
+    background-color: rgba(255, 179, 102, 0.15); /* Light orange highlight */
+    padding: 3px 6px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents chord from breaking across lines */
+    transition: background-color 0.2s ease;
+}
+
+.chord:hover {
+    background-color: rgba(255, 179, 102, 0.3); /* Slightly more opaque on hover */
+}
+
+/* --- Song List Styling (for index/hindi.html) --- */
+.song-list {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.song-list li {
+    margin-bottom: 15px; /* More space between list items */
+    background-color: #f9f9f9; /* Light background for each song card */
+    border: 1px solid #e0e7fd; /* Border matching nav color */
+    border-radius: 8px; /* Slightly more rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-list li:hover {
+    transform: translateY(-5px); /* More pronounced lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.song-list li a {
+    display: block; /* Makes the entire list item clickable */
+    padding: 18px 25px; /* Larger clickable area */
+    text-decoration: none; /* Removes underline from song links */
+    color: #4a69bd; /* Blue color for links, matching h2 */
+    font-size: 1.2em; /* Slightly larger font for song titles */
+    font-weight: 600; /* Bolder text */
+    transition: color 0.3s ease;
+}
+
+.song-list li a:hover {
+    color: #354f8a; /* Darker blue on hover */
+    background-color: #f0f4ff; /* Light background on hover for song list items */
+    border-radius: 8px; /* Maintain border-radius on hover */
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #f0f0f0; /* Light gray footer */
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Space above footer */
+    font-size: 0.95em;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); /* Shadow at the top of the footer */
+=======
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8; /* Very light gray background */
+    color: #333; /* Darker text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex; /* For sticky footer */
+    flex-direction: column; /* For sticky footer */
+    min-height: 100vh; /* For sticky footer */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #ffffff; /* White header */
+    color: #4a4a4a; /* Dark gray text */
+    padding: 25px 0;
+    text-align: center;
+    font-size: 2.5em; /* Larger font for main title */
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* --- Navigation Bar Styling --- */
+nav {
+    background-color: #e0e7fd; /* Light blue navigation */
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    color: #2c3e50; /* Darker blue links */
+    text-decoration: none; /* Removes underline */
+    margin: 0 20px;
+    font-size: 1.15em;
+    padding: 8px 15px;
+    border-radius: 25px; /* Pill-shaped buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #c9d2ef; /* Slightly darker light blue on hover */
+    color: #1a2c3e;
+}
+
+/* --- Main Content Container --- */
+.container {
+    flex-grow: 1; /* Allows container to take up available space, pushing footer down */
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto; /* Centered with vertical space */
+    background-color: #ffffff; /* White container background */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* More prominent but soft shadow */
+    overflow: hidden; /* Clears floats if any inner elements use them */
+}
+
+/* --- Heading Styles (e.g., for song titles on individual song pages) --- */
+h2 {
+    color: #4a69bd; /* Muted blue for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #e0e7fd; /* Subtle separator */
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+/* --- Chord Info Section (Capo, Strumming) --- */
+.chord-info {
+    background-color: #fdfdff; /* Even lighter background for this section */
+    border: 1px solid #e0e7fd;
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin: 0 auto 30px auto; /* Centered, with space below */
+    width: fit-content; /* Make div only as wide as its content */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chord-info h3 {
+    color: #6a8cbf; /* A slightly darker muted blue */
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.chord-info p {
+    color: #777; /* Softer text color */
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic; /* Emphasize strumming pattern */
+}
+
+/* --- Preformatted Text Block (Lyrics with Chords) --- */
+pre {
+    background-color: #f0f4ff; /* Very light blue for code block */
+    color: #555; /* Slightly softer text color for code */
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Fira Code', 'Lucida Console', monospace; /* Modern monospace font */
+    line-height: 2; /* Increased for better readability */
+    white-space: pre-wrap; /* Ensures text wraps within the block */
+    word-wrap: break-word; /* Ensures long words break */
+    font-size: 1.05em;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Very subtle inner shadow */
+}
+
+/* --- Chord Highlight within Pre block --- */
+.chord {
+    font-weight: bold;
+    color: #e67e22; /* A warm, inviting orange for chords */
+    background-color: rgba(255, 179, 102, 0.15); /* Light orange highlight */
+    padding: 3px 6px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents chord from breaking across lines */
+    transition: background-color 0.2s ease;
+}
+
+.chord:hover {
+    background-color: rgba(255, 179, 102, 0.3); /* Slightly more opaque on hover */
+}
+
+/* --- Song List Styling (for index/hindi.html) --- */
+.song-list {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.song-list li {
+    margin-bottom: 15px; /* More space between list items */
+    background-color: #f9f9f9; /* Light background for each song card */
+    border: 1px solid #e0e7fd; /* Border matching nav color */
+    border-radius: 8px; /* Slightly more rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-list li:hover {
+    transform: translateY(-5px); /* More pronounced lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.song-list li a {
+    display: block; /* Makes the entire list item clickable */
+    padding: 18px 25px; /* Larger clickable area */
+    text-decoration: none; /* Removes underline from song links */
+    color: #4a69bd; /* Blue color for links, matching h2 */
+    font-size: 1.2em; /* Slightly larger font for song titles */
+    font-weight: 600; /* Bolder text */
+    transition: color 0.3s ease;
+}
+
+.song-list li a:hover {
+    color: #354f8a; /* Darker blue on hover */
+    background-color: #f0f4ff; /* Light background on hover for song list items */
+    border-radius: 8px; /* Maintain border-radius on hover */
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #f0f0f0; /* Light gray footer */
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Space above footer */
+    font-size: 0.95em;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08); /* Shadow at the top of the footer */
+>>>>>>> 4d682023d11a1c08a7f72e6dd04a0831f04ba3ea
+}
